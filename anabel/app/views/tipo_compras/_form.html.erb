@@ -1,0 +1,21 @@
+<%= form_for(@tipo_compra) do |f| %>
+  <% if @tipo_compra.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tipo_compra.errors.count, "error") %> prohibited this tipo_compra from being saved:</h2>
+
+      <ul>
+      <% @tipo_compra.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tco_descripcion %><br>
+    <%= f.text_field :tco_descripcion %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

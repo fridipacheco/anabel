@@ -1,0 +1,37 @@
+<%= form_for(@usuario) do |f| %>
+  <% if @usuario.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@usuario.errors.count, "error") %> prohibited this usuario from being saved:</h2>
+
+      <ul>
+      <% @usuario.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :usu_nombre %><br>
+    <%= f.text_field :usu_nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :usu_password %><br>
+    <%= f.text_field :usu_password %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo_usuario_id %><br>
+    <%= f.select :tipo_usuario_id, TipoUsuario.all.map{|t| [t.tpu_descripcion,t.id]}, {}, {}  %>
+  </div>
+  <div class="field">
+    <%= f.label :cargo_trabajador_id %><br>
+    <%= f.select :cargo_trabajador_id, CargoTrabajador.all.map{|t| [t.id,t.id]}, {}, {}  %>
+  </div>
+  <div class="field">
+    <%= f.label :estado_habilitado_id %><br>
+    <%= f.select :estado_habilitado_id, EstadoHabilitado.all.map{|t| [t.esh_descripcion,t.id]}, {}, {}  %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

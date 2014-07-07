@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  prb_cant: 1
+  prb_fecha: 2014-06-21
+  prb_preciouni: 1
+
+two:
+  prb_cant: 1
+  prb_fecha: 2014-06-21
+  prb_preciouni: 1

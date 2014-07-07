@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tar_serie: 1
+  tar_verificador: 1
+  tar_expira: 2014-06-21
+  tar_estado: 1
+  tar_cobro: 2014-06-21
+
+two:
+  tar_serie: 1
+  tar_verificador: 1
+  tar_expira: 2014-06-21
+  tar_estado: 1
+  tar_cobro: 2014-06-21

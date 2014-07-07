@@ -1,0 +1,27 @@
+<h1>Listing seccions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sec seccion</th>
+      <th>Sec descripcion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @seccions.each do |seccion| %>
+      <tr>
+        <td><%= seccion.sec_seccion %></td>
+        <td><%= seccion.sec_descripcion %></td>
+        <td><%= link_to 'Show', seccion %></td>
+        <td><%= link_to 'Edit', edit_seccion_path(seccion) %></td>
+        <td><%= link_to 'Destroy', seccion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Seccion', new_seccion_path %>

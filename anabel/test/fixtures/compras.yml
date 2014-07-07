@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  com_cant: 1
+  com_total: 1
+  com_cuota: 1
+
+two:
+  com_cant: 1
+  com_total: 1
+  com_cuota: 1

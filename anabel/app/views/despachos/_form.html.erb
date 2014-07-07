@@ -1,0 +1,41 @@
+<%= form_for(@despacho) do |f| %>
+  <% if @despacho.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@despacho.errors.count, "error") %> prohibited this despacho from being saved:</h2>
+
+      <ul>
+      <% @despacho.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :desp_fecha %><br>
+    <%= f.date_select :desp_fecha %>
+  </div>
+  <div class="field">
+    <%= f.label :vehiculo_id %>:
+    <%= f.select :vehiculo_id, Vehiculo.all.map{|t| [t.veh_patente,t.id]}, {}, {}  %>
+  </div>
+  <div class="field">
+    <%= f.label :trabajador_id %>:
+    <%= f.select :trabajador_id, Trabajador.all.map{|t| [t.tra_nombre,t.id]}, {}, {}  %>
+  </div>
+  <div class="field">
+    <%= f.label :compra_id %>:
+    <%= f.select :compra_id, Compra.all.map{|t| [t.com_id,t.id]}, {}, {}  %>
+  </div>
+  <div class="field">
+    <%= f.label :comuna_id %>:
+    <%= f.select :comuna_id, Comuna.all.map{|t| [t.com_nombre,t.id]}, {}, {}  %>
+  </div>
+  <div class="field">
+    <%= f.label :estado_despacho_id %>:
+    <%= f.select :estado_despacho_id, EstadoDespacho.all.map{|t| [t.ede_descripcion,t.id]}, {}, {}  %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

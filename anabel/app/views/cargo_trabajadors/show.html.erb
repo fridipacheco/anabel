@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cat alta:</strong>
+  <%= @cargo_trabajador.cat_alta %>
+</p>
+
+<p>
+  <strong>Cat baja:</strong>
+  <%= @cargo_trabajador.cat_baja %>
+</p>
+
+<p>
+  <strong>Cat permiso:</strong>
+  <%= @cargo_trabajador.cat_permiso %>
+</p>
+
+<p>
+  <strong>Cat base:</strong>
+  <%= @cargo_trabajador.cat_base %>
+</p>
+
+<p>
+  <strong>Cat porcentaje:</strong>
+  <%= @cargo_trabajador.cat_porcentaje %>
+</p>
+
+<p>
+  <strong>Cat trabajador:</strong>
+  <%= @cargo_trabajador.trabajador.tra_rut %>
+</p>
+
+<p>
+  <strong>Cat estado habilitado:</strong>
+  <%= @cargo_trabajador.estado_habilitado.esh_descripcion %>
+</p>
+
+<p>
+  <strong>Cat tipo trabajador:</strong>
+  <%= @cargo_trabajador.tipo_trabajador.tpt_descripcion %>
+</p>
+
+<%= link_to 'Edit', edit_cargo_trabajador_path(@cargo_trabajador) %> |
+<%= link_to 'Back', cargo_trabajadors_path %>

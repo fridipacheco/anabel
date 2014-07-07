@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tra_rut: 1
+  tra_nombre: MyString
+  tra_apellidop: MyString
+  tra_apellidom: MyString
+  tra_nacimiento: 2014-06-21
+  tra_telefono: 1
+  tra_direccion: MyString
+  tra_numero: 1
+  tra_email: MyString
+  tra_sexo: MyString
+
+two:
+  tra_rut: 1
+  tra_nombre: MyString
+  tra_apellidop: MyString
+  tra_apellidom: MyString
+  tra_nacimiento: 2014-06-21
+  tra_telefono: 1
+  tra_direccion: MyString
+  tra_numero: 1
+  tra_email: MyString
+  tra_sexo: MyString

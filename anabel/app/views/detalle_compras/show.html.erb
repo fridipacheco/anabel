@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dec cantidad:</strong>
+  <%= @detalle_compra.dec_cantidad %>
+</p>
+
+<p>
+  <strong>Dec uni:</strong>
+  <%= @detalle_compra.dec_uni %>
+</p>
+
+<p>
+  <strong>Dec total:</strong>
+  <%= @detalle_compra.dec_total %>
+</p>
+
+<p>
+  <strong>Dec descuento:</strong>
+  <%= @detalle_compra.dec_descuento %>
+</p>
+
+<p>
+  <strong>Dec producto seccion:</strong>
+  <%= @detalle_compra.producto_seccion.id %>
+</p>
+
+<p>
+  <strong>Dec compra:</strong>
+  <%= @detalle_compra.compra.id %>
+</p>
+
+<%= link_to 'Edit', edit_detalle_compra_path(@detalle_compra) %> |
+<%= link_to 'Back', detalle_compras_path %>

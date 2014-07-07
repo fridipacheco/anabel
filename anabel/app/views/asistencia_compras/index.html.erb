@@ -1,0 +1,31 @@
+<h1>Listing asistencia_compras</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Asc fecha</th>
+      <th>Asc comision</th>
+      <th>Asc trabajador seccion</th>
+      <th>Asc compra</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @asistencia_compras.each do |asistencia_compra| %>
+      <tr>
+        <td><%= asistencia_compra.asc_fecha %></td>
+        <td><%= asistencia_compra.asc_comision %></td>
+        <td><%= asistencia_compra.trabajador_seccion.id %></td>
+        <td><%= asistencia_compra.compra.id %></td>
+        <td><%= link_to 'Show', asistencia_compra %></td>
+        <td><%= link_to 'Edit', edit_asistencia_compra_path(asistencia_compra) %></td>
+        <td><%= link_to 'Destroy', asistencia_compra, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Asistencia compra', new_asistencia_compra_path %>

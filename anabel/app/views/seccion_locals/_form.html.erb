@@ -1,0 +1,26 @@
+<%= form_for(@seccion_local) do |f| %>
+  <% if @seccion_local.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@seccion_local.errors.count, "error") %> prohibited this seccion_local from being saved:</h2>
+
+      <ul>
+      <% @seccion_local.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :local_id %>:
+    <%= f.select :local_id, Local.all.map{|t| [t.loc_rs,t.id]}, {}, {}  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :seccion_id %>:
+    <%= f.select :seccion_id, Seccion.all.map{|t| [t.sec_seccion,t.id]}, {}, {}  %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

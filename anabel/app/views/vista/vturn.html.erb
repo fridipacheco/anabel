@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-xs-12">
+    <div class="box">
+      <div class="box-header">
+        <h3 class="box-title">Turno Especial</h3>
+      </div>
+      <div class="box-body table-responsive">
+
+            <table id="example1" class="table table-bordered table-striped">
+  <thead>
+  <tr>
+    <th>Nombre</th>
+    <th>Paterno</th>
+    <th>Materno</th>
+    <th>Seccion</th>
+    <th>Local</th>
+    <th>Horario</th>
+    <th>Fecha Inicio</th>
+    <th>Fecha Fin</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @v_turnoespecial.each do |v_turnoespecial| %>
+      <tr>
+        <td><%= v_turnoespecial.nombre %></td>
+        <td><%= v_turnoespecial.apellido_paterno %></td>
+        <td><%= v_turnoespecial.apellido_materno %></td>
+        <td><%= v_turnoespecial.seccion %></td>
+        <td><%= v_turnoespecial.local %></td>
+        <td><%= v_turnoespecial.horario %></td>
+        <td><%= v_turnoespecial.fecha_inicio.to_date %></td>
+        <td><%= v_turnoespecial.fecha_fin.to_date %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>

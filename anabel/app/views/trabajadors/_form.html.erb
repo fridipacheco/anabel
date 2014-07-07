@@ -1,0 +1,57 @@
+<%= form_for(@trabajador) do |f| %>
+  <% if @trabajador.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@trabajador.errors.count, "error") %> prohibited this trabajador from being saved:</h2>
+
+      <ul>
+      <% @trabajador.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tra_rut %><br>
+    <%= f.number_field :tra_rut %>
+  </div>
+  <div class="field">
+    <%= f.label :tra_nombre %><br>
+    <%= f.text_field :tra_nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :tra_apellidop %><br>
+    <%= f.text_field :tra_apellidop %>
+  </div>
+  <div class="field">
+    <%= f.label :tra_apellidom %><br>
+    <%= f.text_field :tra_apellidom %>
+  </div>
+  <div class="field">
+    <%= f.label :tra_nacimiento %><br>
+    <%= f.date_select :tra_nacimiento,{start_year: 1950,end_year:2000} %>
+  </div>
+  <div class="field">
+    <%= f.label :tra_telefono %><br>
+    <%= f.number_field :tra_telefono %>
+  </div>
+  <div class="field">
+    <%= f.label :tra_direccion %><br>
+    <%= f.text_field :tra_direccion %>
+  </div>
+  <div class="field">
+    <%= f.label :tra_numero %><br>
+    <%= f.number_field :tra_numero %>
+  </div>
+  <div class="field">
+    <%= f.label :tra_email %><br>
+    <%= f.text_field :tra_email %>
+  </div>
+  <div class="field">
+    <%= f.label :tra_sexo %><br>
+    <%= f.text_field :tra_sexo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

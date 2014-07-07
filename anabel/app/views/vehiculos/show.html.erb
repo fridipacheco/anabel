@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Veh patente:</strong>
+  <%= @vehiculo.veh_patente %>
+</p>
+
+<p>
+  <strong>Veh capacidad:</strong>
+  <%= @vehiculo.veh_capacidad %>
+</p>
+
+<p>
+  <strong>Veh modelo:</strong>
+  <%= @vehiculo.modelo.mod_descripcion %>
+</p>
+
+<%= link_to 'Edit', edit_vehiculo_path(@vehiculo) %> |
+<%= link_to 'Back', vehiculos_path %>

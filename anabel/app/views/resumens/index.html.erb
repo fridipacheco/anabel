@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-xs-12">
+    <div class="box">
+      <div class="box-header">
+        <h3 class="box-title">Estadistica por Tipo de Producto</h3>
+      </div>
+      <div class="box-body table-responsive no-padding">
+           <table class="table table-hover">
+
+                <tr>
+                    <th>Rut Local</th>
+                    <th>Razon Social</th>
+                    <th>Id Tipo Producto</th>
+                    <th>Tipo Producto</th>
+                    <th>Total</th>
+                    <th>Usuario</th>
+                    <th>Fecha</th>
+                </tr>
+
+                <% @res.each do |res| %>
+                <tr>
+                    <td><%= res.res_loc_rut %></td>
+                    <td><%= res.res_loc_rs %></td>
+                    <td><%= res.res_tip_id %></td>
+                    <td><%= res.res_tip_descripcion %></td>
+                    <td><%= res.res_total %></td>
+                    <td><%= res.res_user %></td>
+                    <td><%= res.res_fecha.to_date %></td>
+                </tr>
+                <% end %>
+
+           </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= button_to "Generar", resu_resumens_path, :method => :get %>
+
+<%= button_to "Eliminar", delete_resumens_path, :method => :get, data: { confirm: 'Está seguro?' }%>

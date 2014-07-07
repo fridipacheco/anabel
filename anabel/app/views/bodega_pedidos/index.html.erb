@@ -1,0 +1,29 @@
+<h1>Listing bodega_pedidos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Bodega</th>
+      <th>Estado</th>
+      <th>Pedido</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bodega_pedidos.each do |bodega_pedido| %>
+      <tr>
+        <td><%= bodega_pedido.bodega.bod_rs %></td>
+        <td><%= bodega_pedido.estado.est_descripcion %></td>
+        <td><%= bodega_pedido.pedido.id %></td>
+        <td><%= link_to 'Show', bodega_pedido %></td>
+        <td><%= link_to 'Edit', edit_bodega_pedido_path(bodega_pedido) %></td>
+        <td><%= link_to 'Destroy', bodega_pedido, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bodega pedido', new_bodega_pedido_path %>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Com cant:</strong>
+  <%= @compra.com_cant %>
+</p>
+
+<p>
+  <strong>Com total:</strong>
+  <%= @compra.com_total %>
+</p>
+
+<p>
+  <strong>Com cuota:</strong>
+  <%= @compra.com_cuota %>
+</p>
+
+<p>
+  <strong>Com cliente:</strong>
+  <%= (@compra.cliente_id == nil)?'': @compra.cliente.cli_nombre %>
+</p>
+
+<p>
+  <strong>Com tipo pago:</strong>
+  <%= @compra.tipo_pago.tpp_descripcion %>
+</p>
+
+<p>
+  <strong>Com tipo compra:</strong>
+  <%= @compra.tipo_compra.tco_descripcion %>
+</p>
+
+<%= link_to 'Edit', edit_compra_path(@compra) %> |
+<%= link_to 'Back', compras_path %>

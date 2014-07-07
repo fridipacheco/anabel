@@ -1,0 +1,2 @@
+module ProductoBodegasHelper
+end

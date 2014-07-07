@@ -1,0 +1,33 @@
+<h1>Listing producto_bodegas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Prb cant</th>
+      <th>Prb fecha</th>
+      <th>Prb preciouni</th>
+      <th>Prb producto</th>
+      <th>Prb bodega</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @producto_bodegas.each do |producto_bodega| %>
+      <tr>
+        <td><%= producto_bodega.prb_cant %></td>
+        <td><%= producto_bodega.prb_fecha %></td>
+        <td><%= producto_bodega.prb_preciouni %></td>
+        <td><%= producto_bodega.producto.pro_nombre %></td>
+        <td><%= producto_bodega.bodega.bod_rs %></td>
+        <td><%= link_to 'Show', producto_bodega %></td>
+        <td><%= link_to 'Edit', edit_producto_bodega_path(producto_bodega) %></td>
+        <td><%= link_to 'Destroy', producto_bodega, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Producto bodega', new_producto_bodega_path %>

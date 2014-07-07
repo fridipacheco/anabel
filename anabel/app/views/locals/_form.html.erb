@@ -1,0 +1,49 @@
+<%= form_for(@local) do |f| %>
+  <% if @local.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@local.errors.count, "error") %> prohibited this local from being saved:</h2>
+
+      <ul>
+      <% @local.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :loc_rut %><br>
+    <%= f.number_field :loc_rut %>
+  </div>
+  <div class="field">
+    <%= f.label :loc_rs %><br>
+    <%= f.text_field :loc_rs %>
+  </div>
+  <div class="field">
+    <%= f.label :loc_direccion %><br>
+    <%= f.text_field :loc_direccion %>
+  </div>
+  <div class="field">
+    <%= f.label :loc_numero %><br>
+    <%= f.number_field :loc_numero %>
+  </div>
+  <div class="field">
+    <%= f.label :loc_telefono %><br>
+    <%= f.number_field :loc_telefono %>
+  </div>
+  <div class="field">
+    <%= f.label :loc_mail %><br>
+    <%= f.text_field :loc_mail %>
+  </div>
+  <div class="field">
+    <%= f.label :comuna_id %><br>
+    <%= f.select :comuna_id, Comuna.all.map{|t| [t.com_nombre,t.id]}, {}, {}  %>
+  </div>
+  <div class="field">
+    <%= f.label :trabajador_id %><br>
+    <%= f.select :trabajador_id, Trabajador.all.map{|t| [t.tra_nombre,t.id]}, {}, {}  %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

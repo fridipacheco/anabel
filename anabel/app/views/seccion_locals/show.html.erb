@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Local:</strong>
+  <%= @seccion_local.local.loc_rs %>
+</p>
+
+<p>
+  <strong>Seccion:</strong>
+  <%= @seccion_local.seccion.sec_seccion %>
+</p>
+
+<%= link_to 'Edit', edit_seccion_local_path(@seccion_local) %> |
+<%= link_to 'Back', seccion_locals_path %>

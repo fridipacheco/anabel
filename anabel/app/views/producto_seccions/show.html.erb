@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Prs cant:</strong>
+  <%= @producto_seccion.prs_cant %>
+</p>
+
+<p>
+  <strong>Prs fecha:</strong>
+  <%= @producto_seccion.prs_fecha %>
+</p>
+
+<p>
+  <strong>Prs preciouni:</strong>
+  <%= @producto_seccion.prs_preciouni %>
+</p>
+
+<p>
+  <strong>Prs producto bodega:</strong>
+  <%= @producto_seccion.producto_bodega.id %>
+</p>
+
+<p>
+  <strong>Prs seccion_local:</strong>
+  <%= @producto_seccion.seccion_local.id %>
+</p>
+
+<%= link_to 'Edit', edit_producto_seccion_path(@producto_seccion) %> |
+<%= link_to 'Back', producto_seccions_path %>

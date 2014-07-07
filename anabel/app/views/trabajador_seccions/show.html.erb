@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Trs fechaini:</strong>
+  <%= @trabajador_seccion.trs_fechaini %>
+</p>
+
+<p>
+  <strong>Trs fechafin:</strong>
+  <%= @trabajador_seccion.trs_fechafin %>
+</p>
+
+<p>
+  <strong>Trs seccion_local:</strong>
+  <%= @trabajador_seccion.seccion_local.id %>
+</p>
+
+<p>
+  <strong>Trs trabajador:</strong>
+  <%= @trabajador_seccion.trabajador.tra_nombre %>
+</p>
+
+<p>
+  <strong>Trs turno:</strong>
+  <%= @trabajador_seccion.turno.tur_horario %>
+</p>
+
+<%= link_to 'Edit', edit_trabajador_seccion_path(@trabajador_seccion) %> |
+<%= link_to 'Back', trabajador_seccions_path %>

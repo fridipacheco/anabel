@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bod_rut: 1
+  bod_rs: MyString
+  bod_direccion: MyString
+  bod_numero: 1
+  bod_telefono: 1
+  bod_mail: MyString
+
+two:
+  bod_rut: 1
+  bod_rs: MyString
+  bod_direccion: MyString
+  bod_numero: 1
+  bod_telefono: 1
+  bod_mail: MyString

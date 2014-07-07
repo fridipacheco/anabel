@@ -1,0 +1,33 @@
+<h1>Listing producto_seccions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Prs cant</th>
+      <th>Prs fecha</th>
+      <th>Prs preciouni</th>
+      <th>Prs producto bodega</th>
+      <th>Prs seccion local</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @producto_seccions.each do |producto_seccion| %>
+      <tr>
+        <td><%= producto_seccion.prs_cant %></td>
+        <td><%= producto_seccion.prs_fecha %></td>
+        <td><%= producto_seccion.prs_preciouni %></td>
+        <td><%= producto_seccion.producto_bodega.id %></td>
+        <td><%= producto_seccion.seccion_local.id %></td>
+        <td><%= link_to 'Show', producto_seccion %></td>
+        <td><%= link_to 'Edit', edit_producto_seccion_path(producto_seccion) %></td>
+        <td><%= link_to 'Destroy', producto_seccion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Producto seccion', new_producto_seccion_path %>

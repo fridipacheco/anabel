@@ -1,0 +1,44 @@
+
+<div class="row">
+  <div class="col-xs-12">
+    <div class="box">
+      <div class="box-header">
+        <h3 class="box-title">Cuotas No Pagas</h3>
+      </div>
+      <div class="box-body table-responsive">
+            <table id="example1" class="table table-bordered table-striped">
+  <thead>
+  <tr>
+    <th>Nombre</th>
+    <th>Paterno</th>
+    <th>Materno</th>
+    <th>Nº cuota</th>
+    <th>Nº Cuota No Paga</th>
+    <th>Total Compra</th>
+    <th>Total Cuota</th>
+    <th>Local</th>
+    <th>Id Compra</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @v_cuota_nopaga.each do |v_cuota_nopaga| %>
+      <tr>
+        <td><%= v_cuota_nopaga.nombre %></td>
+        <td><%= v_cuota_nopaga.paterno %></td>
+        <td><%= v_cuota_nopaga.materno %></td>
+        <td><%= v_cuota_nopaga.total_cuota %></td>
+        <td><%= v_cuota_nopaga.cuota_nopaga %></td>
+        <td><%= v_cuota_nopaga.monto_total %></td>
+        <td><%= v_cuota_nopaga.monto_cuota %></td>
+        <td><%= v_cuota_nopaga.local %></td>
+        <td><%= v_cuota_nopaga.compra %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+      </div>
+    </div>
+  </div>
+</div>
+

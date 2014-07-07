@@ -1,0 +1,25 @@
+<%= form_for(@modelo) do |f| %>
+  <% if @modelo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@modelo.errors.count, "error") %> prohibited this modelo from being saved:</h2>
+
+      <ul>
+      <% @modelo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :mod_descripcion %><br>
+    <%= f.text_field :mod_descripcion %>
+  </div>
+    <div class="field">
+      <%= f.label :marca_id %>:
+      <%= f.select :marca_id, Marca.all.map{|t| [t.mar_descripcion,t.id]}, {}, {}  %>
+    </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

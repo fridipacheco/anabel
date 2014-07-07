@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dep cant:</strong>
+  <%= @detalle_pedido.dep_cant %>
+</p>
+
+<p>
+  <strong>Dep precio:</strong>
+  <%= @detalle_pedido.dep_precio %>
+</p>
+
+<p>
+  <strong>Dep producto en bodega:</strong>
+  <%= @detalle_pedido.producto_bodega.id %>
+</p>
+
+<p>
+  <strong>Dep pedido:</strong>
+  <%= @detalle_pedido.pedido.id %>
+</p>
+
+<%= link_to 'Edit', edit_detalle_pedido_path(@detalle_pedido) %> |
+<%= link_to 'Back', detalle_pedidos_path %>

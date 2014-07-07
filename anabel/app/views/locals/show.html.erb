@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Loc rut:</strong>
+  <%= @local.loc_rut %>
+</p>
+
+<p>
+  <strong>Loc rs:</strong>
+  <%= @local.loc_rs %>
+</p>
+
+<p>
+  <strong>Loc direccion:</strong>
+  <%= @local.loc_direccion %>
+</p>
+
+<p>
+  <strong>Loc numero:</strong>
+  <%= @local.loc_numero %>
+</p>
+
+<p>
+  <strong>Loc telefono:</strong>
+  <%= @local.loc_telefono %>
+</p>
+
+<p>
+  <strong>Loc mail:</strong>
+  <%= @local.loc_mail %>
+</p>
+
+<p>
+  <strong>Loc comuna:</strong>
+  <%= @local.comuna.com_nombre %>
+</p>
+
+<p>
+  <strong>Loc trabajador:</strong>
+  <%= @local.trabajador.tra_nombre %>
+</p>
+
+<%= link_to 'Edit', edit_local_path(@local) %> |
+<%= link_to 'Back', locals_path %>

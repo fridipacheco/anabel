@@ -1,0 +1,29 @@
+<h1>Listing local_pedidos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Local</th>
+      <th>Estado</th>
+      <th>Pedido</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @local_pedidos.each do |local_pedido| %>
+      <tr>
+        <td><%= local_pedido.local.loc_rs %></td>
+        <td><%= local_pedido.estado.est_descripcion %></td>
+        <td><%= local_pedido.pedido.id %></td>
+        <td><%= link_to 'Show', local_pedido %></td>
+        <td><%= link_to 'Edit', edit_local_pedido_path(local_pedido) %></td>
+        <td><%= link_to 'Destroy', local_pedido, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Local pedido', new_local_pedido_path %>

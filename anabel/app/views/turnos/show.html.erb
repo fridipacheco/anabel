@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tur horario:</strong>
+  <%= @turno.tur_horario %>
+</p>
+
+<p>
+  <strong>Tur tipo turno:</strong>
+  <%= @turno.tipo_turno.ttu_descripcio %>
+</p>
+
+<%= link_to 'Edit', edit_turno_path(@turno) %> |
+<%= link_to 'Back', turnos_path %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ped_fecha: 2014-06-21
+  ped_total: 1
+  ped_canttot: 1
+
+two:
+  ped_fecha: 2014-06-21
+  ped_total: 1
+  ped_canttot: 1

@@ -1,0 +1,51 @@
+ <%= form_for(@tarjet) do |f| %>
+  <% if @tarjet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tarjet.errors.count, "error") %> prohibited this tarjet from being saved:</h2>
+
+      <ul>
+      <% @tarjet.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+  <div class="form-group">
+    <%= f.label :tar_serie, "Nº de Serie" %><br>
+    <%= f.number_field :tar_serie, class: "form-control"%>
+  </div>
+  <div class="form-group">
+    <%= f.label :tar_verificador, "Dígito Verificador" %><br>
+    <%= f.number_field :tar_verificador, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :tar_expira, "Fecha de Expiración" %><br>
+    <%= f.date_select :tar_expira, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <div class="checkbox">
+    <%= f.label :tar_estado,"Bloquear" %>
+    <%= f.check_box :tar_estado, class: "checkbox" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :tar_cobro,"Fecha de Cobro" %><br>
+    <%= f.date_select :tar_cobro, class: "form-control" %>
+  </div>
+    <div class="form-group">
+      <%= f.label :cliente_id, "Rut de Cliente" %>:
+      <%= f.select :cliente_id, Cliente.all.map{|t| [t.cli_rut,t.id]}, {}, {class: "form-control"}  %>
+    </div>
+    <div class="form-group">
+      <%= f.label :tipo_tarjet_id, "Tipo de Tarjeta" %>:
+      <%= f.select :tipo_tarjet_id, TipoTarjet.all.map{|t| [t.tta_descripcion,t.id]}, {}, {class: "form-control"}  %>
+    </div>
+  <div>
+    <%= f.submit "Guardar", :class => "btn btn-default btn-block" %>
+  </div>
+
+
+<% end %>

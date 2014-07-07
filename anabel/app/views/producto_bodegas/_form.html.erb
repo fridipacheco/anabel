@@ -1,0 +1,37 @@
+<%= form_for(@producto_bodega) do |f| %>
+  <% if @producto_bodega.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@producto_bodega.errors.count, "error") %> prohibited this producto_bodega from being saved:</h2>
+
+      <ul>
+      <% @producto_bodega.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :prb_cant %><br>
+    <%= f.number_field :prb_cant %>
+  </div>
+  <div class="field">
+    <%= f.label :prb_fecha %><br>
+    <%= f.date_select :prb_fecha %>
+  </div>
+  <div class="field">
+    <%= f.label :prb_preciouni %><br>
+    <%= f.number_field :prb_preciouni %>
+  </div>
+  <div class="field">
+    <%= f.label :producto_id %>:
+    <%= f.select :producto_id, Producto.all.map{|t| [t.pro_nombre,t.id]}, {}, {}  %>
+  </div>
+  <div class="field">
+    <%= f.label :bodega_id %>:
+    <%= f.select :bodega_id, Bodega.all.map{|t| [t.bod_rs,t.id]}, {}, {}  %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

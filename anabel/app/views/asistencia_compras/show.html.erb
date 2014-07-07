@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Asc fecha:</strong>
+  <%= @asistencia_compra.asc_fecha %>
+</p>
+
+<p>
+  <strong>Asc comision:</strong>
+  <%= @asistencia_compra.asc_comision %>
+</p>
+
+<p>
+  <strong>Asc trabajador_seccion:</strong>
+  <%= @asistencia_compra.trabajador_seccion.id %>
+</p>
+
+<p>
+  <strong>Asc compra:</strong>
+  <%= @asistencia_compra.compra.id %>
+</p>
+
+<%= link_to 'Edit', edit_asistencia_compra_path(@asistencia_compra) %> |
+<%= link_to 'Back', asistencia_compras_path %>

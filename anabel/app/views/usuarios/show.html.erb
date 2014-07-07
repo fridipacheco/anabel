@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Usu nombre:</strong>
+  <%= @usuario.usu_nombre %>
+</p>
+
+<p>
+  <strong>Usu password:</strong>
+  <%= @usuario.usu_password %>
+</p>
+
+<p>
+  <strong>Usu tipo usuario:</strong>
+  <%= @usuario.tipo_usuario.tpu_descripcion %>
+</p>
+
+<p>
+  <strong>Usu cargo trabajador:</strong>
+  <%= @usuario.cargo_trabajador.tipo_trabajador.tpt_descripcion %>
+</p>
+
+<p>
+  <strong>Usu estado habilitado:</strong>
+  <%= @usuario.estado_habilitado.esh_descripcion %>
+</p>
+
+<%= link_to 'Edit', edit_usuario_path(@usuario) %> |
+<%= link_to 'Back', usuarios_path %>

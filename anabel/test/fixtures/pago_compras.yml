@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pag_cuota: 1
+  pag_fecha: 2014-06-21
+  pag_venc: 2014-06-21
+  pag_estado: 1
+  pag_monto: 1
+
+two:
+  pag_cuota: 1
+  pag_fecha: 2014-06-21
+  pag_venc: 2014-06-21
+  pag_estado: 1
+  pag_monto: 1

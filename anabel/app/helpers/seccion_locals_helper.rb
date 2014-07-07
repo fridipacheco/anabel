@@ -1,0 +1,2 @@
+module SeccionLocalsHelper
+end

@@ -1,0 +1,45 @@
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box">
+          <div class="box-header">
+            <h3 class="box-title">Comisión Anual Empleados</h3>
+          </div>
+          <div class="box-body table-responsive">
+            <table id="example1" class="table table-bordered table-striped">
+
+                <thead>
+                     <tr>
+                            <th>Nombre</th>
+                            <th>Paterno</th>
+                            <th>Materno</th>
+                            <th>Comision Total</th>
+                            <th>Nº de Compras</th>
+                            <th>Valor Maximo</th>
+                     </tr>
+                </thead>
+
+                <tbody>
+                    <% @v_comision_anual.each do |v_comision_anual| %>
+                        <tr>
+                            <td><%= v_comision_anual.nombre %></td>
+                            <td><%= v_comision_anual.apellido_paterno %></td>
+                            <td><%= v_comision_anual.apellido_materno %></td>
+                            <td><%= v_comision_anual.comision_total.to_i %></td>
+                            <td><%= v_comision_anual.total_compras_atendidas.to_i %></td>
+                            <td><%= v_comision_anual.valor_maximo.to_i %></td>
+                        </tr>
+                    <% end %>
+                </tbody>
+            </table>
+          </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function() {
+        $("#example1").dataTable();
+
+    });
+</script>

@@ -1,0 +1,39 @@
+<h1>Listing locals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Loc rut</th>
+      <th>Loc rs</th>
+      <th>Loc direccion</th>
+      <th>Loc numero</th>
+      <th>Loc telefono</th>
+      <th>Loc mail</th>
+      <th>Loc comuna</th>
+      <th>Loc trabajador</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @locals.each do |local| %>
+      <tr>
+        <td><%= local.loc_rut %></td>
+        <td><%= local.loc_rs %></td>
+        <td><%= local.loc_direccion %></td>
+        <td><%= local.loc_numero %></td>
+        <td><%= local.loc_telefono %></td>
+        <td><%= local.loc_mail %></td>
+        <td><%= local.comuna.com_nombre %></td>
+        <td><%= local.trabajador.tra_nombre %></td>
+        <td><%= link_to 'Show', local %></td>
+        <td><%= link_to 'Edit', edit_local_path(local) %></td>
+        <td><%= link_to 'Destroy', local, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Local', new_local_path %>

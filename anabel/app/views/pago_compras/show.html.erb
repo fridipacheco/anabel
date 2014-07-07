@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pag cuota:</strong>
+  <%= @pago_compra.pag_cuota %>
+</p>
+
+<p>
+  <strong>Pag fecha:</strong>
+  <%= @pago_compra.pag_fecha %>
+</p>
+
+<p>
+  <strong>Pag venc:</strong>
+  <%= @pago_compra.pag_venc %>
+</p>
+
+<p>
+  <strong>Pag estado:</strong>
+  <%= @pago_compra.pag_estado %>
+</p>
+
+<p>
+  <strong>Pag monto:</strong>
+  <%= @pago_compra.pag_monto %>
+</p>
+
+<p>
+  <strong>Pag tarjeta:</strong>
+  <%= @pago_compra.tarjet.tar_serie %>
+</p>
+
+<p>
+  <strong>Pag compra:</strong>
+  <%= @pago_compra.compra.id %>
+</p>
+
+<%= link_to 'Edit', edit_pago_compra_path(@pago_compra) %> |
+<%= link_to 'Back', pago_compras_path %>

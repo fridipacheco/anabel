@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Anabel</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body class="skin-black">
+
+<header class="header">
+
+  <%= link_to "AnaBella", root_path, class: "logo" %>
+
+  <nav class="navbar navbar-static-top" role="navigation">
+
+    <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </a>
+
+  </nav>
+
+</header>
+
+<div class="wrapper row-offcanvas row-offcanvas-left">
+
+  <aside class="left-side sidebar-offcanvas">
+     <section class="sidebar">
+
+       <div class="user-panel">
+         <div class="pull-left info">
+           <p>Hola</p>
+
+         </div>
+       </div>
+
+       <ul class="sidebar-menu">
+         <li class="treeview">
+           <a href="<%= vista_path %>">
+
+             <i class="fa fa-money"></i>
+             <span>Comision Anual (vista)</span>
+             <i class="fa fa-angle-left pull-right"></i>
+
+           </a>
+         </li>
+         <li class="treeview">
+         <a href="<%= nopaga_path %>">
+
+           <i class="fa fa-hand-o-down"></i>
+           <span>Cuotas No Pagas(vista)</span>
+           <i class="fa fa-angle-left pull-right"></i>
+
+         </a>
+         </li>
+         <li class="treeview">
+         <a href="<%= vturn_path %>">
+
+           <i class="fa fa-user-md"></i>
+           <span>Turno Especial(vista)</span>
+           <i class="fa fa-angle-left pull-right"></i>
+
+         </a>
+       </li>
+       <li class="treeview">
+         <a href="<%= tarjets_path %>">
+
+           <i class="fa fa-table"></i>
+           <span>Tarjetas(trigger audi)</span>
+           <i class="fa fa-angle-left pull-right"></i>
+
+         </a>
+       </li>
+       <li class="treeview">
+         <a href="<%= compras_path %>">
+
+           <i class="fa fa-table"></i>
+           <span>Compras(trigger2)</span>
+           <i class="fa fa-angle-left pull-right"></i>
+
+         </a>
+       </li>
+         <li class="treeview">
+           <a href="<%= funcion_index_path %>">
+
+             <i class="fa fa-table"></i>
+             <span>Funciones</span>
+             <i class="fa fa-angle-left pull-right"></i>
+
+           </a>
+         </li>
+         <li class="treeview">
+           <a href="<%= resumens_path %>">
+
+             <i class="fa fa-table"></i>
+             <span>Procedimiento 1</span>
+             <i class="fa fa-angle-left pull-right"></i>
+
+           </a>
+         </li>
+         <li class="treeview">
+           <a href="<%= bloqueos_path %>">
+
+             <i class="fa fa-table"></i>
+             <span>Procedimiento 2</span>
+             <i class="fa fa-angle-left pull-right"></i>
+
+           </a>
+         </li>
+       </ul>
+
+     </section>
+  </aside>
+
+  <aside class="right-side">
+    <section class="content">
+
+      <%= yield %>
+
+    </section>
+  </aside>
+
+</div>
+
+</body>
+</html>

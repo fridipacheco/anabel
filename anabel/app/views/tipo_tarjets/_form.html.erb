@@ -1,0 +1,21 @@
+<%= form_for(@tipo_tarjet) do |f| %>
+  <% if @tipo_tarjet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tipo_tarjet.errors.count, "error") %> prohibited this tipo_tarjet from being saved:</h2>
+
+      <ul>
+      <% @tipo_tarjet.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tta_descripcion %><br>
+    <%= f.text_field :tta_descripcion %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

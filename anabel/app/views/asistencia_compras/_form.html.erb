@@ -1,0 +1,33 @@
+<%= form_for(@asistencia_compra) do |f| %>
+  <% if @asistencia_compra.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@asistencia_compra.errors.count, "error") %> prohibited this asistencia_compra from being saved:</h2>
+
+      <ul>
+      <% @asistencia_compra.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :asc_fecha %><br>
+    <%= f.date_select :asc_fecha %>
+  </div>
+  <div class="field">
+    <%= f.label :asc_comision %><br>
+    <%= f.number_field :asc_comision %>
+  </div>
+  <div class="field">
+    <%= f.label :trabajador_seccion_id %>:
+    <%= f.select :trabajador_seccion_id, TrabajadorSeccion.all.map{|t| [t.id,t.id]}, {}, {}  %>
+  </div>
+  <div class="field">
+    <%= f.label :compra_id %>:
+    <%= f.select :compra_id, Compra.all.map{|t| [t.id,t.id]}, {}, {}  %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

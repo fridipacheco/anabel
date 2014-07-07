@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bodega:</strong>
+  <%= @bodega_pedido.bodega.bod_rs %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @bodega_pedido.estado.est_descripcion %>
+</p>
+
+<p>
+  <strong>Pedido:</strong>
+  <%= @bodega_pedido.pedido.id %>
+</p>
+
+<%= link_to 'Edit', edit_bodega_pedido_path(@bodega_pedido) %> |
+<%= link_to 'Back', bodega_pedidos_path %>

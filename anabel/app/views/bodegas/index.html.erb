@@ -1,0 +1,35 @@
+<h1>Listing bodegas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Bod rut</th>
+      <th>Bod rs</th>
+      <th>Bod direccion</th>
+      <th>Bod numero</th>
+      <th>Bod telefono</th>
+      <th>Bod mail</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bodegas.each do |bodega| %>
+      <tr>
+        <td><%= bodega.bod_rut %></td>
+        <td><%= bodega.bod_rs %></td>
+        <td><%= bodega.bod_direccion %></td>
+        <td><%= bodega.bod_numero %></td>
+        <td><%= bodega.bod_telefono %></td>
+        <td><%= bodega.bod_mail %></td>
+        <td><%= link_to 'Show', bodega %></td>
+        <td><%= link_to 'Edit', edit_bodega_path(bodega) %></td>
+        <td><%= link_to 'Destroy', bodega, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bodega', new_bodega_path %>

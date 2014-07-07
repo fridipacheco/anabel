@@ -1,0 +1,49 @@
+<%= form_for(@cliente) do |f| %>
+  <% if @cliente.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cliente.errors.count, "error") %> prohibited this cliente from being saved:</h2>
+
+      <ul>
+      <% @cliente.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cli_rut %><br>
+    <%= f.number_field :cli_rut %>
+  </div>
+  <div class="field">
+    <%= f.label :cli_nombre %><br>
+    <%= f.text_field :cli_nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :cli_apellidop %><br>
+    <%= f.text_field :cli_apellidop %>
+  </div>
+  <div class="field">
+    <%= f.label :cli_apellidom %><br>
+    <%= f.text_field :cli_apellidom %>
+  </div>
+  <div class="field">
+    <%= f.label :cli_telefono %><br>
+    <%= f.number_field :cli_telefono %>
+  </div>
+  <div class="field">
+    <%= f.label :cli_direccion %><br>
+    <%= f.text_field :cli_direccion %>
+  </div>
+  <div class="field">
+    <%= f.label :cli_numero %><br>
+    <%= f.number_field :cli_numero %>
+  </div>
+  <div class="field">
+    <%= f.label :cli_email %><br>
+    <%= f.text_field :cli_email %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

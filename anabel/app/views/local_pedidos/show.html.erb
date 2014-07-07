@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>local:</strong>
+  <%= @local_pedido.local.loc_rs %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @local_pedido.estado.est_descripcion %>
+</p>
+
+<p>
+  <strong>Pedido:</strong>
+  <%= @local_pedido.pedido.id %>
+</p>
+
+<%= link_to 'Edit', edit_local_pedido_path(@local_pedido) %> |
+<%= link_to 'Back', local_pedidos_path %>

@@ -1,0 +1,45 @@
+<%= form_for(@pago_compra) do |f| %>
+  <% if @pago_compra.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pago_compra.errors.count, "error") %> prohibited this pago_compra from being saved:</h2>
+
+      <ul>
+      <% @pago_compra.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :pag_cuota %><br>
+    <%= f.number_field :pag_cuota %>
+  </div>
+  <div class="field">
+    <%= f.label :pag_fecha %><br>
+    <%= f.date_select :pag_fecha %>
+  </div>
+  <div class="field">
+    <%= f.label :pag_venc %><br>
+    <%= f.date_select :pag_venc %>
+  </div>
+  <div class="field">
+    <%= f.label :pag_estado %><br>
+    <%= f.number_field :pag_estado %>
+  </div>
+  <div class="field">
+    <%= f.label :pag_monto %><br>
+    <%= f.number_field :pag_monto %>
+  </div>
+    <div class="field">
+      <%= f.label :tarjet_id %>:
+      <%= f.select :tarjet_id, Tarjet.all.map{|t| [t.tar_serie,t.id]}, {}, {}  %>
+    </div>
+  <div class="field">
+    <%= f.label :compra_id %>:
+    <%= f.select :compra_id, Compra.all.map{|t| [t.id,t.id]}, {}, {}  %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

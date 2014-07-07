@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  trs_fechaini: 2014-06-21
+  trs_fechafin: 2014-06-21
+
+two:
+  trs_fechaini: 2014-06-21
+  trs_fechafin: 2014-06-21

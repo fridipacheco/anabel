@@ -1,0 +1,71 @@
+<p>Promedio de Tipo de Cuotas:</p>
+
+<%= form_tag({:controller => "funcion", :action => "index"}, :method => "get") do %>
+    <div class="field">
+      <%= label_tag "var", "Tipo de Tarjeta" %><br>
+      <%= select_tag "var",options_for_select( TipoTarjet.all.map{|t| [t.tta_descripcion,t.id]} ), { include_blank: true } %>
+      <%= submit_tag "Ejecutar" %>
+    </div>
+
+<%end%>
+
+<th>Resultado:</th>
+<%= @r == nil ? 0 : @r %>
+
+<br>
+<br>
+<br>
+
+
+<p>Promedio Ingreso Anual:</p>
+
+<%= form_tag({:controller => "funcion", :action => "index"}, :method => "get") do %>
+
+    <table>
+      <tr>
+        <td> <%= label_tag "var1", "Local" %></td>
+        <td> <%= label_tag "var2", "Seccion" %></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><%= select_tag "var1",options_for_select( Local.all.map{|t| [t.loc_rs,t.id]} ), { include_blank: true } %> </td>
+        <td> <%= select_tag "var2",options_for_select( Seccion.all.map{|t| [t.sec_seccion,t.id]} ), { include_blank: true } %></td>
+        <td> <%= submit_tag "Ejecutar" %></td>
+      </tr>
+    </table>
+
+<%end%>
+<th>Resultado:</th>
+<%= @r1 == nil ? 0 : @r1 %>
+
+<br>
+<br>
+<br>
+
+<br><p>Número de Trabajadores:</p>
+
+<%= form_tag({:controller => "funcion", :action => "index"}, :method => "get") do %>
+
+    <table>
+      <tr>
+        <td> <%= label_tag "var3", "Local" %></td>
+        <td> <%= label_tag "var4", "Seccion" %></td>
+        <td> <%= label_tag "var5", "Turno" %></td>
+        <td> <%= label_tag "var6", "Fecha" %></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><%= select_tag "var3",options_for_select( Local.all.map{|t| [t.loc_rs,t.id]} ), { include_blank: true } %> </td>
+        <td> <%= select_tag "var4",options_for_select( Seccion.all.map{|t| [t.sec_seccion,t.id]} ), { include_blank: true } %></td>
+        <td> <%= select_tag "var5",options_for_select( Turno.all.map{|t| [t.tur_horario,t.id]} ), { include_blank: true } %> </td>
+        <td> <%= date_field_tag "var6"%></td>
+        <td> <%= submit_tag "Ejecutar" %></td>
+      </tr>
+    </table>
+<%end%>
+<th>Resultado:</th>
+<%= @r2 == nil ? 0 : @r2 %>
+<br>
+<br>
+
+

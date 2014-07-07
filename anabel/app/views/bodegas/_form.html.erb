@@ -1,0 +1,41 @@
+<%= form_for(@bodega) do |f| %>
+  <% if @bodega.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bodega.errors.count, "error") %> prohibited this bodega from being saved:</h2>
+
+      <ul>
+      <% @bodega.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :bod_rut %><br>
+    <%= f.number_field :bod_rut %>
+  </div>
+  <div class="field">
+    <%= f.label :bod_rs %><br>
+    <%= f.text_field :bod_rs %>
+  </div>
+  <div class="field">
+    <%= f.label :bod_direccion %><br>
+    <%= f.text_field :bod_direccion %>
+  </div>
+  <div class="field">
+    <%= f.label :bod_numero %><br>
+    <%= f.number_field :bod_numero %>
+  </div>
+  <div class="field">
+    <%= f.label :bod_telefono %><br>
+    <%= f.number_field :bod_telefono %>
+  </div>
+  <div class="field">
+    <%= f.label :bod_mail %><br>
+    <%= f.text_field :bod_mail %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

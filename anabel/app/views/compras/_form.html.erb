@@ -1,0 +1,41 @@
+<%= form_for(@compra) do |f| %>
+  <% if @compra.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@compra.errors.count, "error") %> prohibited this compra from being saved:</h2>
+
+      <ul>
+      <% @compra.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :com_cant %><br>
+    <%= f.number_field :com_cant %>
+  </div>
+  <div class="field">
+    <%= f.label :com_total %><br>
+    <%= f.number_field :com_total %>
+  </div>
+  <div class="field">
+    <%= f.label :com_cuota %><br>
+    <%= f.number_field :com_cuota %>
+  </div>
+  <div class="field">
+    <%= f.label :cliente_id %>:
+    <%= f.select :cliente_id, Cliente.all.map{|t| [t.cli_rut,t.id]}, {include_blank: true}, {}  %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo_pago_id %>:
+    <%= f.select :tipo_pago_id, TipoPago.all.map{|t| [t.tpp_descripcion,t.id]}, {}, {}  %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo_compra_id %>:
+    <%= f.select :tipo_compra_id, TipoCompra.all.map{|t| [t.tco_descripcion,t.id]}, {}, {}  %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

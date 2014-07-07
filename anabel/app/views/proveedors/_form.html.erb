@@ -1,0 +1,49 @@
+<%= form_for(@proveedor) do |f| %>
+  <% if @proveedor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@proveedor.errors.count, "error") %> prohibited this proveedor from being saved:</h2>
+
+      <ul>
+      <% @proveedor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :prov_rut %><br>
+    <%= f.number_field :prov_rut %>
+  </div>
+  <div class="field">
+    <%= f.label :prov_nombre %><br>
+    <%= f.text_field :prov_nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :prov_apellidop %><br>
+    <%= f.text_field :prov_apellidop %>
+  </div>
+  <div class="field">
+    <%= f.label :prov_apellidom %><br>
+    <%= f.text_field :prov_apellidom %>
+  </div>
+  <div class="field">
+    <%= f.label :prov_telefono %><br>
+    <%= f.number_field :prov_telefono %>
+  </div>
+  <div class="field">
+    <%= f.label :prov_direccion %><br>
+    <%= f.text_field :prov_direccion %>
+  </div>
+  <div class="field">
+    <%= f.label :prov_numero %><br>
+    <%= f.number_field :prov_numero %>
+  </div>
+  <div class="field">
+    <%= f.label :prov_email %><br>
+    <%= f.text_field :prov_email %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

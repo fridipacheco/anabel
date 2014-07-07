@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  loc_rut: 1
+  loc_rs: MyString
+  loc_direccion: MyString
+  loc_numero: 1
+  loc_telefono: 1
+  loc_mail: MyString
+
+two:
+  loc_rut: 1
+  loc_rs: MyString
+  loc_direccion: MyString
+  loc_numero: 1
+  loc_telefono: 1
+  loc_mail: MyString

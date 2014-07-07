@@ -1,0 +1,7 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tpu_descripcion: MyString
+
+two:
+  tpu_descripcion: MyString

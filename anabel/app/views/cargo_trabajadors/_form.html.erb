@@ -1,0 +1,49 @@
+<%= form_for(@cargo_trabajador) do |f| %>
+  <% if @cargo_trabajador.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cargo_trabajador.errors.count, "error") %> prohibited this cargo_trabajador from being saved:</h2>
+
+      <ul>
+      <% @cargo_trabajador.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cat_alta %><br>
+    <%= f.date_select :cat_alta %>
+  </div>
+  <div class="field">
+    <%= f.label :cat_baja %><br>
+    <%= f.date_select :cat_baja, {include_blank: true} %>
+  </div>
+  <div class="field">
+    <%= f.label :cat_permiso %><br>
+    <%= f.number_field :cat_permiso %>
+  </div>
+  <div class="field">
+    <%= f.label :cat_base %><br>
+    <%= f.number_field :cat_base %>
+  </div>
+  <div class="field">
+    <%= f.label :cat_porcentaje %><br>
+    <%= f.number_field :cat_porcentaje %>
+  </div>
+  <div class="field">
+    <%= f.label :trabajador_id %>:
+    <%= f.select :trabajador_id, Trabajador.all.map{|t| [t.tra_rut,t.id]}, {}, {}  %>
+  </div>
+  <div class="field">
+    <%= f.label :estado_habilitado_id %>:
+    <%= f.select :estado_habilitado_id, EstadoHabilitado.all.map{|t| [t.esh_descripcion,t.id]}, {}, {}  %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo_trabajador_id %>:
+    <%= f.select :tipo_trabajador_id, TipoTrabajador.all.map{|t| [t.tpt_descripcion,t.id]}, {}, {}  %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

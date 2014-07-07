@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ped fecha:</strong>
+  <%= @pedido.ped_fecha %>
+</p>
+
+<p>
+  <strong>Ped total:</strong>
+  <%= @pedido.ped_total %>
+</p>
+
+<p>
+  <strong>Ped canttot:</strong>
+  <%= @pedido.ped_canttot %>
+</p>
+
+<p>
+  <strong>Ped trabajador:</strong>
+  <%= @pedido.trabajador.tra_rut %>
+</p>
+
+<p>
+  <strong>Ped proveedor:</strong>
+  <%= @pedido.proveedor.prov_rut %>
+</p>
+
+
+<%= link_to 'Edit', edit_pedido_path(@pedido) %> |
+<%= link_to 'Back', pedidos_path %>

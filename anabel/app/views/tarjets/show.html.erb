@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tar serie:</strong>
+  <%= @tarjet.tar_serie %>
+</p>
+
+<p>
+  <strong>Tar verificador:</strong>
+  <%= @tarjet.tar_verificador %>
+</p>
+
+<p>
+  <strong>Tar expira:</strong>
+  <%= @tarjet.tar_expira %>
+</p>
+
+<p>
+  <strong>Tar estado:</strong>
+  <%= @tarjet.tar_estado %>
+</p>
+
+<p>
+  <strong>Tar cobro:</strong>
+  <%= @tarjet.tar_cobro %>
+</p>
+
+<p>
+  <strong>Cliente:</strong>
+  <%= @tarjet.cliente.cli_rut %>
+</p>
+
+<p>
+  <strong>Tipo Tarjeta:</strong>
+  <%= @tarjet.tipo_tarjet.tta_descripcion %>
+</p>
+
+<%= link_to 'Edit', edit_tarjet_path(@tarjet) %> |
+<%= link_to 'Back', tarjets_path %>

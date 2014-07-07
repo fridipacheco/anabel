@@ -1,0 +1,39 @@
+<h1>Listing cargo_trabajadors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cat alta</th>
+      <th>Cat baja</th>
+      <th>Cat permiso</th>
+      <th>Cat base</th>
+      <th>Cat porcentaje</th>
+      <th>Cat trabajador</th>
+      <th>Cat estado habilitado</th>
+      <th>Cat tipo trabajador</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cargo_trabajadors.each do |cargo_trabajador| %>
+      <tr>
+        <td><%= cargo_trabajador.cat_alta %></td>
+        <td><%= cargo_trabajador.cat_baja %></td>
+        <td><%= cargo_trabajador.cat_permiso %></td>
+        <td><%= cargo_trabajador.cat_base %></td>
+        <td><%= cargo_trabajador.cat_porcentaje %></td>
+        <td><%= cargo_trabajador.trabajador.tra_rut %></td>
+        <td><%= cargo_trabajador.estado_habilitado.esh_descripcion %></td>
+        <td><%= cargo_trabajador.tipo_trabajador.tpt_descripcion %></td>
+        <td><%= link_to 'Show', cargo_trabajador %></td>
+        <td><%= link_to 'Edit', edit_cargo_trabajador_path(cargo_trabajador) %></td>
+        <td><%= link_to 'Destroy', cargo_trabajador, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cargo trabajador', new_cargo_trabajador_path %>
